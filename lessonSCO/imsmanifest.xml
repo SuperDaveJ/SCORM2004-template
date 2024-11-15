@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" 
+	xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" 
+	xmlns:imsss="http://www.imsglobal.org/xsd/imsss" 
+	xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" 
+	xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" 
+	identifier="LessonSCO_Prototype" 
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd 		
+						http://ltsc.ieee.org/xsd/LOM lom.xsd 
+						http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd 
+						http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd 
+						http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd 
+						http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 3rd Edition</schemaversion>    
+  </metadata>
+  
+  <organizations default="LessonSCO">
+    <organization identifier="LessonSCO" adlseq:objectivesGlobalToSystem="false">
+      <title>Lesson SCO Prototype</title>
+      <item identifier="L1" isvisible="true" identifierref="L1_resource">
+        <title>Lesson 1</title>
+      </item>
+    </organization>
+  </organizations>
+  
+  <resources>
+      <resource identifier="L1_resource" adlcp:scormType="sco" type="webcontent" href="index.html">
+		<file href="index.html" />
+		<file href="loading.html" />
+		<file href="help.html" />
+		<file href="glossary.html" />
+		<file href="resources.html" />
+		<file href="lesson1/10010.html" />
+		<file href="lesson1/10020.html" />
+		<file href="lesson1/10030.html" />
+		<file href="lesson1/10040.html" />
+      </resource>
+  </resources>
+  
+</manifest>

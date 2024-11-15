@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" 
+	xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" 
+	xmlns:imsss="http://www.imsglobal.org/xsd/imsss" 
+	xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" 
+	xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" 
+	identifier="COURSE-IDENTIFIER" 
+	xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd 		
+						http://ltsc.ieee.org/xsd/LOM lom.xsd 
+						http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd 
+						http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd 
+						http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd 
+						http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>2004 3rd Edition</schemaversion>    
+  </metadata>
+  
+  <organizations default="PACKAGE-NAME">
+    <organization identifier="PACKAGE-NAME" adlseq:objectivesGlobalToSystem="false">
+      <title>Course Title</title>
+        <metadata>
+            <imsmd:lom>
+                <imsmd:general>
+                    <imsmd:description>
+                        <string>Course Description</string>
+                    </imsmd:description>
+                </imsmd:general>
+            </imsmd:lom>
+        </metadata> 
+      <item identifier="item-id" isvisible="true" identifierref="item_resource">
+        <title>Item Title</title>
+        <imsss:sequencing>
+          <imsss:deliveryControls completionSetByContent="true" objectiveSetByContent="true" />
+        </imsss:sequencing>
+      </item>
+    </organization>
+  </organizations>
+  
+  <resources>
+      <resource identifier="item_resource" adlcp:scormType="sco" type="webcontent" href="index.html">
+		<file href="index.html" />
+      </resource>
+  </resources>
+  
+</manifest>

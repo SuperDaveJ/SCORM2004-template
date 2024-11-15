@@ -1,0 +1,84 @@
+/*********** C2 Grid System - XZ ************/
+
+/*****  sections  *****/
+.section {
+	clear: both;
+	padding: 0;
+	margin: 0;
+}
+
+/*****  grouping   *****/
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*****  grid column setup  *****/
+.col {
+	position: relative;
+	display: block;
+	float: left;
+	margin: 0 0 0 2%;
+}
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+/*.col:last-child { margin-right: 0; }*/ /* does NOT work for IE8 and lower */
+.no-left-margin { margin-left: 0; }
+
+/*****  Grid of 12 columns with 2.0% gutters  *****/
+/* for all viewports when needed */
+.push-1 { left: 8.5%; right: auto; }
+.pull-1 { right: 8.5%; left: auto; }
+.push-2 { left: 17%; right: auto; }
+.pull-2 { right: 17%; left: auto; }
+.push-3 { left: 25.5%; right: auto; }
+.pull-3 { right: 25.5%; left: auto; }
+.push-4 { left: 34%; right: auto; }
+.pull-4 { right: 34%; left: auto; }
+.push-5 { left: 42.5%; right: auto; }
+.pull-5 { right: 42.5%; left: auto; }
+.push-6 { left: 51%; right: auto; }
+.pull-6 { right: 51%; left: auto; }
+
+.offset-1 { margin-left: 8.5%; }
+.offset-2 { margin-left: 17%; }
+.offset-3 { margin-left: 25.5%; }
+.offset-4 { margin-left: 34%; }
+.offset-5 { margin-left: 42.5%; }
+.offset-6 { margin-left: 51%; }
+
+/*  Viewport greater than 480 pixels  */
+.span_12_of_12 { width: 100%; }
+.span_11_of_12 { width: 91.5%; }
+.span_10_of_12 { width: 83.0%; }
+.span_9_of_12  { width: 74.5%; }
+.span_8_of_12  { width: 66.0%; }
+.span_7_of_12  { width: 57.5%; }
+.span_6_of_12  { width: 49.0%; }
+.span_5_of_12  { width: 40.5%; }
+.span_4_of_12  { width: 32.0%; }
+.span_3_of_12  { width: 23.5%; }
+.span_2_of_12  { width: 15.0%; }
+.span_1_of_12  { width:  6.5%; }
+
+/*  Go full width at less than 640 pixels */
+@media only screen and (max-width: 640px) {
+	.span_12_of_12,
+	.span_11_of_12,
+	.span_10_of_12,
+	.span_9_of_12,
+	.span_8_of_12,
+	.span_7_of_12,
+	.span_6_of_12,
+	.span_5_of_12,
+	.span_4_of_12,
+	.span_3_of_12,
+	.span_2_of_12,
+	.span_1_of_12 { width: 100%; margin-left: 0; }
+}

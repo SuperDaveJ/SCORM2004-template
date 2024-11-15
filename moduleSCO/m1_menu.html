@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Module Menu</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: none;
+}
+body {
+	background-color: #fff;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:13px;
+	font-weight:bold;
+	text-align: center;
+}
+
+#wraper {
+	background:#fff url(sysimages/mra_lesson.jpg) top left no-repeat;
+	position:relative;
+	width:955px;
+	height:626px;
+	margin:0 auto;
+	text-align:left;
+}
+#butContainer {
+	background:url(sysimages/MRA_mod1_lessons.png) top left no-repeat;
+	position:absolute;
+	left:222px;
+	top:145px;
+	width:526px;
+	height:305px;
+}
+#modTitle {
+	position:absolute;
+	left:84px;
+	top:68px;
+	width:787px;
+	height:24px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center;
+	color:#fff;
+}
+#prompt {
+	position:absolute;
+	left:294px;
+	top:559px;
+	width:377px;
+	height:19px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	color:#666;
+}
+#exit {
+	position:absolute;
+	left:432px;
+	top:592px;
+	width:95px;
+	height:26px;
+}
+
+.button {
+	border:none;
+	outline:none;
+}
+</style>
+
+<script type="text/javascript" src="../scripts/jquery-1.7.1.min.js"></script>
+<script language="JavaScript" type="text/javascript">
+$(document).ready( function() {
+	for (i=1; i<=parent.modLessons; i++) {
+		if ( parent.getLessonStatus(i) == 2 ) {
+			$("#checkmark"+i).css("visibility", "visible");
+		}
+	}
+	
+	$(".button").hover (
+		function() {
+			this.src = this.src.replace( /_0/, '_2' );
+		},
+		function() {
+			this.src = this.src.replace( /_2/, '_0' );
+		}
+	);
+	
+	$("img").attr("title", function() { return this.alt; } );
+	
+});
+
+function exitConfirm(){
+	if (confirm("Do you wish to exit the course?")==true) parent.exitCourse(true);
+}
+
+</script>
+</head>
+
+<body>
+<div id="wraper"> <!-- Outmost Div -->
+  
+  <div id="modTitle"><span style="color:#fec029;">Module 1:</span> Fundamentals of Assessing Manufacturing Readiness</div>
+  
+  <div id="butContainer">
+    <!-- Lesson 1 -->
+  	<div id="les1" style="position:absolute; left:22px; top:25px; width:476px; height:38px;">
+    <a href="lesson1/11010.html"><img class="button" src="sysimages/M1L1_0.jpg" width="475" height="38" alt="Lesson 1. Navigating This Course" /></a></div>
+    
+    <div id="checkmark1" style="position:absolute; left:45px; top:27px; width:31px; height:35px; z-index:11; visibility:hidden;">
+    <img src="sysimages/checkmark.png" width="31" height="35" alt="lesson 1 completed" /></div>
+
+    <!-- Lesson 2 -->
+  	<div id="les2" style="position:absolute; left:22px; top:77px; width:476px; height:38px;">
+    <a href="lesson2/12010.html"><img class="button" src="sysimages/M1L2_0.jpg" width="475" height="38" alt="Lesson 2. Introduction to Assessing Manufacturing Readiness" /></a></div>
+    
+    <div id="checkmark2" style="position:absolute; left:45px; top:81px; width:31px; height:35px; z-index:11; visibility:hidden;">
+    <img src="sysimages/checkmark.png" width="31" height="35" alt="lesson 2 completed" /></div>
+    
+    <!-- Lesson 3 -->
+  	<div id="les3" style="position:absolute; left:22px; top:131px; width:476px; height:38px;">
+    <a href="lesson3/13010.html"><img class="button" src="sysimages/M1L3_0.jpg" width="475" height="38" alt="Lesson 3. The Requirements for Assessing Manufacturing Readiness" /></a></div>
+    
+    <div id="checkmark3" style="position:absolute; left:45px; top:133px; width:31px; height:35px; z-index:11; visibility:hidden;">
+    <img src="sysimages/checkmark.png" width="31" height="35" alt="lesson 3 completed" /></div>
+    
+    <!-- Lesson 4 -->
+  	<div id="les4" style="position:absolute; left:22px; top:186px; width:476px; height:38px;">
+    <a href="lesson4/14010.html"><img class="button" src="sysimages/M1L4_0.jpg" width="475" height="38" alt="Lesson 4. Application of MRLs and MRAs during the Acquisition Life Cycle" /></a></div>
+    
+    <div id="checkmark4" style="position:absolute; left:45px; top:185px; width:31px; height:35px; z-index:11; visibility:hidden;">
+    <img src="sysimages/checkmark.png" width="31" height="35" alt="lesson 4 completed" /></div>
+       
+  </div> <!-- End of butContainer -->
+
+  <div id="prompt">Select a lesson title to view that lesson.</div>
+    
+  <div id="exit">
+  <a href="javascript:exitConfirm();">
+  <img class="button" src="sysimages/lessonExit_0.jpg" width="95" height="26" alt="exit" /></a>
+  </div>
+  
+</div> <!-- End of wraper -->
+
+
+
+</body>
+</html>
